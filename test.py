@@ -15,7 +15,7 @@
 # gmap.draw('map.html')
 
 import requests
-response = requests.get("https://elementz.rguhack.uk/pointsOfInterest")
+c
 
 #print(response.json())
 import json
