@@ -64,10 +64,25 @@ for p in spipelat:
     gmap.plot(*path, edge_width=4, color='red')
     pp = pp + 1
     print(pp)
-# path = zip(*[
-#      (spipelat[2],spipelon[2]),
-#      (epipelat[2],epipelon[2])
-#  ])
-# gmap.plot(*path, edge_width=4, color='red')
-#     # gmap.plot(response.json())
+
+subseaAssetResult = requests.get("https://elementz.rguhack.uk/subseaAssets")
+subseaAssetsLat = []
+subseaAssetsLon = []
+
+for asset in subseaAssetResult.json():
+    subseaAssetsLat.append(asset['coordinates']['coordinates']['latitude'])
+    subseaAssetsLon.append(asset['coordinates']['coordinates']['longitude'])
+for point in range(len(subseaAssetsLon)):    
+    gmap.marker(subseaAssetsLat[point], subseaAssetsLon[point], precision=2, color='blue')
+
+surfAssetResult = requests.get("https://elementz.rguhack.uk/surfVessels")
+surfAssetsLat = []
+surfAssetsLon = []
+
+for asset in surfAssetResult.json():
+    surfAssetsLat.append(asset['coordinates']['latitude'])
+    surfAssetsLon.append(asset['coordinates']['longitude'])
+
+for point in range(len(surfAssetsLon)):    
+    gmap.marker(surfAssetsLat[point], surfAssetsLon[point], precision=2, color='pink')
 gmap.draw('map.html')
