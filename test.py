@@ -17,7 +17,7 @@
 import requests
 response = requests.get("https://elementz.rguhack.uk/pointsOfInterest")
 
-print(response.json())
+#print(response.json())
 import json
 import gmplot
 apikey = '' # (your API key here)
@@ -37,12 +37,37 @@ for ii in resjson:
 
     gmap.marker(lat[i], lon[i], precision=2, color='#FFD700')
     i += 1
+
+response2 = requests.get("https://elementz.rguhack.uk/subseaPipelines")
+resjson2 = response2.json()
+print(response2.json())
+spipelat = []
+spipelon = []
+epipelat = []
+epipelon = []
+#print(resjson2[1]['end_coordinates']['coordinates']['latitude'])
+for pipeii in response2.json():
+    # Extract latitude and longitude
+    spipelat.append(pipeii['start_coordinates']['coordinates']['latitude'])
+    spipelon.append(pipeii['start_coordinates']['coordinates']['longitude'])
+    epipelat.append(pipeii['end_coordinates']['coordinates']['latitude'])
+    epipelon.append(pipeii['end_coordinates']['coordinates']['longitude'])
+
+print(spipelat[2] , spipelon[2], epipelat[2] , epipelon[2])
 #print(response.get('id'))
+pp = 0
+for p in spipelat:
+    path = zip(*[
+        (spipelat[pp],spipelon[pp]),
+        (epipelat[pp],epipelon[pp])
+    ])
+    gmap.plot(*path, edge_width=4, color='red')
+    pp = pp + 1
+    print(pp)
 # path = zip(*[
-#     response.json()
-# ])
-
-
-# #gmap.plot(*path, edge_width=7, color='red')
-# gmap.plot(response.json())
+#      (spipelat[2],spipelon[2]),
+#      (epipelat[2],epipelon[2])
+#  ])
+# gmap.plot(*path, edge_width=4, color='red')
+#     # gmap.plot(response.json())
 gmap.draw('map.html')
