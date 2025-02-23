@@ -15,7 +15,7 @@
 # gmap.draw('map.html')
 
 import requests
-c
+
 
 #print(response.json())
 import json

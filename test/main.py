@@ -1,10 +1,10 @@
-#Imports
+def create_map():
+    #Imports
 
-import requests
-import json
-import gmplot
+    import requests
+    import json
+    import gmplot
 
-def generate_map():
     #Setup Google Map
     apikey = '' #No api key needed for dev
     gmap = gmplot.GoogleMapPlotter(57.118696610829296, -2.1350145324081367, 5, apikey=apikey)
@@ -114,7 +114,7 @@ def generate_map():
         SubAssetWorkpacks.append(asset['workpacks_at_site_count'])
     #Plot Subsea Assets
     for point in range(len(SubAssetName)):
-        gmap.marker(SubAssetLat[point],SubAssetLon[point], title=SubAssetName[point], info_window="<a href='127.0.0.1/templates/Ness.html'>" , precision=2, color="purple")
+        gmap.marker(SubAssetLat[point],SubAssetLon[point], title=SubAssetName[point], precision=2, color="purple")
 
 
     #Get Surface Assets
@@ -150,4 +150,4 @@ def generate_map():
 
     for point in range(len(SurfAssetName)):
         gmap.marker(SurfAssetLat[point],SurfAssetLon[point], title=SurfAssetName[point], precision=2, color="blue")
-    gmap.draw('templates/map.html')
+    gmap.draw('map.html')
