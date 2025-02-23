@@ -30,7 +30,7 @@ for element in POIResponse.json():
 
 #Plot POI's
 for point in range(len(POILat)):
-    gmap.marker(POILat[point], POILon[point], title=POIName[point], info_window=f"""<html><h2>{POIName[point]}</h2>
+    gmap.marker(POILat[point], POILon[point], title=POIName[point], label='i', info_window=f"""<html><h2>{POIName[point]}</h2>
             <br> Description: {POIDesc[point]}</h4></html>""" , precision=2, color='#FFD700')
 
 
@@ -124,11 +124,11 @@ for asset in SubAssetResult.json():
 for point in range(len(SubAssetName)):
     gmap.marker(SubAssetLat[point],SubAssetLon[point], title=SubAssetName[point], info_window=f"""<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">
             <h2>{SubAssetName[point]}</h2>
-            <h4><br> Depth: {SubAssetDepth[point]}
+            <h4><br> Depth: {SubAssetDepth[point]}m
             <br> Health: {SubAssetHealth[point]}
-            <br> Pressure: {SubAssetPressure[point]}
-            <br> Temperature: {SubAssetTemp[point]}
-            <br> FlowRate: {SubAssetFlowRate[point]}
+            <br> Pressure: {SubAssetPressure[point]} bar
+            <br> Temperature: {SubAssetTemp[point]}&degC
+            <br> FlowRate: {SubAssetFlowRate[point]}l/min
             <br> Last Insp: {SubAssetMaintenanceInfo[0][point]}
             <br> Next Maintainance: {SubAssetMaintenanceInfo[1][point]},
             <br> Alerts: {SubAssetAlerts[point]},
@@ -174,17 +174,18 @@ for point in range(len(SurfAssetName)):
     gmap.marker(SurfAssetLat[point],SurfAssetLon[point], title=SurfAssetName[point], info_window=f"""
     <html><h2>{SurfAssetName[point]}</h2>
     <h4><br> Vessel Type: {SurfAssetVesselType[point]}
-    <br> Heading: {SurfAssetHeading[point]}
-    <br> Speed: {SurfAssetSpeed[point]}
+    <br> Heading: {SurfAssetHeading[point]} N
+    <br> Speed: {SurfAssetSpeed[point]} knots
     <br> Destination: {SurfAssetDest[point]}
     <br> ETA: {SurfAssetETA[point]}
     <br> Status: {SurfAssetStatus[point]}
     <br> Last Inspection: {SurfAssetLastInspection[point]}
     <br> Crew Count: {SurfAssetCrewCount[point]}
-    <br> Fuel Level: {SurfAssetFuelLevel[point]}
+    <br> Fuel Level: {SurfAssetFuelLevel[point]}%
     <br> Weather: <br>
-    <ul>{SurfAssetWeather[0][point]} </ul>
-    <ul>{SurfAssetWeather[1][point]}</ul>
+    <ul>Wind Speed: {SurfAssetWeather[0][point]}mph </ul>
+    <ul>Wave height:{SurfAssetWeather[1][point]}m</ul>
+    <ul>temprature:{SurfAssetWeather[2][point]}&degC</ul>
     </h4></html>
     """, precision=2, color="blue")
 gmap.draw('templates/map.html')

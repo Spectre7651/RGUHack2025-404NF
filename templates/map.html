@@ -19,6 +19,7 @@
         var info_marker_0 = new google.maps.Marker({
             position: new google.maps.LatLng(57.12, -2.14),
             title: "RGU",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -34,6 +35,7 @@
         var info_marker_1 = new google.maps.Marker({
             position: new google.maps.LatLng(57.12, -2.12),
             title: "Asda",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -49,6 +51,7 @@
         var info_marker_2 = new google.maps.Marker({
             position: new google.maps.LatLng(57.14, -2.07),
             title: "Marine Ops",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -64,6 +67,7 @@
         var info_marker_3 = new google.maps.Marker({
             position: new google.maps.LatLng(57.16, -2.10),
             title: "AU",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -79,6 +83,7 @@
         var info_marker_4 = new google.maps.Marker({
             position: new google.maps.LatLng(57.50, -1.77),
             title: "Peterhead Harbour",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -94,6 +99,7 @@
         var info_marker_5 = new google.maps.Marker({
             position: new google.maps.LatLng(56.71, -2.50),
             title: "Montrose Basin",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -109,6 +115,7 @@
         var info_marker_6 = new google.maps.Marker({
             position: new google.maps.LatLng(57.58, -1.84),
             title: "St Fergus Gas Terminal",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -124,6 +131,7 @@
         var info_marker_7 = new google.maps.Marker({
             position: new google.maps.LatLng(57.69, -2.82),
             title: "Cullen Ice Cream Shop",
+            label: "i",
             icon: marker_icon_FFD700,
             map: map
         });
@@ -149,7 +157,7 @@
         });
 
         var info_window_8 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Thistle</h2>\n            <h4><br> Depth: 210.0\n            <br> Health: Healthy\n            <br> Pressure: 120.5\n            <br> Temperature: 15.8\n            <br> FlowRate: 3200.0\n            <br> Last Insp: 2025-01-01T10:00:00Z\n            <br> Next Maintainance: 2025-06-01T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Balmoral\', \'Logan\']\n            <br> Anomalies: 0\n            <br> Workpacks: 3</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Thistle</h2>\n            <h4><br> Depth: 210.0m\n            <br> Health: Healthy\n            <br> Pressure: 120.5 bar\n            <br> Temperature: 15.8&degC\n            <br> FlowRate: 3200.0l/min\n            <br> Last Insp: 2025-01-01T10:00:00Z\n            <br> Next Maintainance: 2025-06-01T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Balmoral\', \'Logan\']\n            <br> Anomalies: 0\n            <br> Workpacks: 3</h4></html>'
         });
         
         info_marker_8.addListener('click', function() {
@@ -164,7 +172,7 @@
         });
 
         var info_window_9 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Balmoral</h2>\n            <h4><br> Depth: 230.0\n            <br> Health: Degraded\n            <br> Pressure: 110.0\n            <br> Temperature: 13.5\n            <br> FlowRate: 2800.0\n            <br> Last Insp: 2024-12-15T12:00:00Z\n            <br> Next Maintainance: 2025-05-10T10:00:00Z,\n            <br> Alerts: [\'None\'],\n            <br> Connected Assets: [\'Balmoral\', \'Logan\']\n            <br> Anomalies: 1\n            <br> Workpacks: 2</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Balmoral</h2>\n            <h4><br> Depth: 230.0m\n            <br> Health: Degraded\n            <br> Pressure: 110.0 bar\n            <br> Temperature: 13.5&degC\n            <br> FlowRate: 2800.0l/min\n            <br> Last Insp: 2024-12-15T12:00:00Z\n            <br> Next Maintainance: 2025-05-10T10:00:00Z,\n            <br> Alerts: [\'None\'],\n            <br> Connected Assets: [\'Balmoral\', \'Logan\']\n            <br> Anomalies: 1\n            <br> Workpacks: 2</h4></html>'
         });
         
         info_marker_9.addListener('click', function() {
@@ -179,7 +187,7 @@
         });
 
         var info_window_10 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Tartan</h2>\n            <h4><br> Depth: 250.0\n            <br> Health: Critical\n            <br> Pressure: 140.0\n            <br> Temperature: 18.2\n            <br> FlowRate: 3600.0\n            <br> Last Insp: 2024-11-20T14:00:00Z\n            <br> Next Maintainance: 2025-02-15T09:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Thistle\', \'Tartan\']\n            <br> Anomalies: 2\n            <br> Workpacks: 4</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Tartan</h2>\n            <h4><br> Depth: 250.0m\n            <br> Health: Critical\n            <br> Pressure: 140.0 bar\n            <br> Temperature: 18.2&degC\n            <br> FlowRate: 3600.0l/min\n            <br> Last Insp: 2024-11-20T14:00:00Z\n            <br> Next Maintainance: 2025-02-15T09:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Thistle\', \'Tartan\']\n            <br> Anomalies: 2\n            <br> Workpacks: 4</h4></html>'
         });
         
         info_marker_10.addListener('click', function() {
@@ -194,7 +202,7 @@
         });
 
         var info_window_11 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Logan</h2>\n            <h4><br> Depth: 270.0\n            <br> Health: Offline\n            <br> Pressure: 0.0\n            <br> Temperature: 0.0\n            <br> FlowRate: 0.0\n            <br> Last Insp: 2024-10-01T10:00:00Z\n            <br> Next Maintainance: 2025-01-20T11:00:00Z,\n            <br> Alerts: [\'Low pressure warning\'],\n            <br> Connected Assets: [\'Thistle\', \'Tartan\']\n            <br> Anomalies: 0\n            <br> Workpacks: 1</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Logan</h2>\n            <h4><br> Depth: 270.0m\n            <br> Health: Offline\n            <br> Pressure: 0.0 bar\n            <br> Temperature: 0.0&degC\n            <br> FlowRate: 0.0l/min\n            <br> Last Insp: 2024-10-01T10:00:00Z\n            <br> Next Maintainance: 2025-01-20T11:00:00Z,\n            <br> Alerts: [\'Low pressure warning\'],\n            <br> Connected Assets: [\'Thistle\', \'Tartan\']\n            <br> Anomalies: 0\n            <br> Workpacks: 1</h4></html>'
         });
         
         info_marker_11.addListener('click', function() {
@@ -209,7 +217,7 @@
         });
 
         var info_window_12 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Kelpie</h2>\n            <h4><br> Depth: 220.0\n            <br> Health: Healthy\n            <br> Pressure: 125.0\n            <br> Temperature: 16.0\n            <br> FlowRate: 3000.0\n            <br> Last Insp: 2024-12-10T09:00:00Z\n            <br> Next Maintainance: 2025-07-01T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Balmoral\', \'Kelpie\']\n            <br> Anomalies: 0\n            <br> Workpacks: 5</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Kelpie</h2>\n            <h4><br> Depth: 220.0m\n            <br> Health: Healthy\n            <br> Pressure: 125.0 bar\n            <br> Temperature: 16.0&degC\n            <br> FlowRate: 3000.0l/min\n            <br> Last Insp: 2024-12-10T09:00:00Z\n            <br> Next Maintainance: 2025-07-01T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Balmoral\', \'Kelpie\']\n            <br> Anomalies: 0\n            <br> Workpacks: 5</h4></html>'
         });
         
         info_marker_12.addListener('click', function() {
@@ -224,7 +232,7 @@
         });
 
         var info_window_13 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Angus</h2>\n            <h4><br> Depth: 200.0\n            <br> Health: Healthy\n            <br> Pressure: 130.0\n            <br> Temperature: 16.1\n            <br> FlowRate: 3100.0\n            <br> Last Insp: 2025-01-05T09:00:00Z\n            <br> Next Maintainance: 2025-07-01T10:00:00Z,\n            <br> Alerts: [\'High pressure alert\', \'Flow irregularity detected\'],\n            <br> Connected Assets: [\'Balmoral\', \'Kelpie\']\n            <br> Anomalies: 0\n            <br> Workpacks: 2</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Angus</h2>\n            <h4><br> Depth: 200.0m\n            <br> Health: Healthy\n            <br> Pressure: 130.0 bar\n            <br> Temperature: 16.1&degC\n            <br> FlowRate: 3100.0l/min\n            <br> Last Insp: 2025-01-05T09:00:00Z\n            <br> Next Maintainance: 2025-07-01T10:00:00Z,\n            <br> Alerts: [\'High pressure alert\', \'Flow irregularity detected\'],\n            <br> Connected Assets: [\'Balmoral\', \'Kelpie\']\n            <br> Anomalies: 0\n            <br> Workpacks: 2</h4></html>'
         });
         
         info_marker_13.addListener('click', function() {
@@ -239,7 +247,7 @@
         });
 
         var info_window_14 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Belhaven</h2>\n            <h4><br> Depth: 190.0\n            <br> Health: Degraded\n            <br> Pressure: 100.0\n            <br> Temperature: 14.0\n            <br> FlowRate: 2600.0\n            <br> Last Insp: 2024-12-20T11:00:00Z\n            <br> Next Maintainance: 2025-05-15T09:00:00Z,\n            <br> Alerts: [\'High pressure alert\', \'Flow irregularity detected\'],\n            <br> Connected Assets: [\'Thistle\']\n            <br> Anomalies: 1\n            <br> Workpacks: 3</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Belhaven</h2>\n            <h4><br> Depth: 190.0m\n            <br> Health: Degraded\n            <br> Pressure: 100.0 bar\n            <br> Temperature: 14.0&degC\n            <br> FlowRate: 2600.0l/min\n            <br> Last Insp: 2024-12-20T11:00:00Z\n            <br> Next Maintainance: 2025-05-15T09:00:00Z,\n            <br> Alerts: [\'High pressure alert\', \'Flow irregularity detected\'],\n            <br> Connected Assets: [\'Thistle\']\n            <br> Anomalies: 1\n            <br> Workpacks: 3</h4></html>'
         });
         
         info_marker_14.addListener('click', function() {
@@ -254,7 +262,7 @@
         });
 
         var info_window_15 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Union</h2>\n            <h4><br> Depth: 240.0\n            <br> Health: Critical\n            <br> Pressure: 140.0\n            <br> Temperature: 17.5\n            <br> FlowRate: 4000.0\n            <br> Last Insp: 2024-11-25T10:30:00Z\n            <br> Next Maintainance: 2025-03-10T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Tartan\']\n            <br> Anomalies: 3\n            <br> Workpacks: 5</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Union</h2>\n            <h4><br> Depth: 240.0m\n            <br> Health: Critical\n            <br> Pressure: 140.0 bar\n            <br> Temperature: 17.5&degC\n            <br> FlowRate: 4000.0l/min\n            <br> Last Insp: 2024-11-25T10:30:00Z\n            <br> Next Maintainance: 2025-03-10T10:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Tartan\']\n            <br> Anomalies: 3\n            <br> Workpacks: 5</h4></html>'
         });
         
         info_marker_15.addListener('click', function() {
@@ -269,7 +277,7 @@
         });
 
         var info_window_16 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Auchterloch</h2>\n            <h4><br> Depth: 250.0\n            <br> Health: Healthy\n            <br> Pressure: 120.0\n            <br> Temperature: 15.0\n            <br> FlowRate: 3500.0\n            <br> Last Insp: 2024-12-01T08:30:00Z\n            <br> Next Maintainance: 2025-06-20T09:00:00Z,\n            <br> Alerts: [\'Asset offline\'],\n            <br> Connected Assets: [\'Belhaven\']\n            <br> Anomalies: 0\n            <br> Workpacks: 4</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Auchterloch</h2>\n            <h4><br> Depth: 250.0m\n            <br> Health: Healthy\n            <br> Pressure: 120.0 bar\n            <br> Temperature: 15.0&degC\n            <br> FlowRate: 3500.0l/min\n            <br> Last Insp: 2024-12-01T08:30:00Z\n            <br> Next Maintainance: 2025-06-20T09:00:00Z,\n            <br> Alerts: [\'Asset offline\'],\n            <br> Connected Assets: [\'Belhaven\']\n            <br> Anomalies: 0\n            <br> Workpacks: 4</h4></html>'
         });
         
         info_marker_16.addListener('click', function() {
@@ -284,7 +292,7 @@
         });
 
         var info_window_17 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Fifties</h2>\n            <h4><br> Depth: 270.0\n            <br> Health: Offline\n            <br> Pressure: 0.0\n            <br> Temperature: 0.0\n            <br> FlowRate: 0.0\n            <br> Last Insp: 2024-10-15T10:00:00Z\n            <br> Next Maintainance: 2025-02-15T09:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Angus\', \'Union\']\n            <br> Anomalies: 0\n            <br> Workpacks: 1</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Fifties</h2>\n            <h4><br> Depth: 270.0m\n            <br> Health: Offline\n            <br> Pressure: 0.0 bar\n            <br> Temperature: 0.0&degC\n            <br> FlowRate: 0.0l/min\n            <br> Last Insp: 2024-10-15T10:00:00Z\n            <br> Next Maintainance: 2025-02-15T09:00:00Z,\n            <br> Alerts: [],\n            <br> Connected Assets: [\'Angus\', \'Union\']\n            <br> Anomalies: 0\n            <br> Workpacks: 1</h4></html>'
         });
         
         info_marker_17.addListener('click', function() {
@@ -299,7 +307,7 @@
         });
 
         var info_window_18 = new google.maps.InfoWindow({
-            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Ness</h2>\n            <h4><br> Depth: 230.0\n            <br> Health: Degraded\n            <br> Pressure: 105.0\n            <br> Temperature: 14.8\n            <br> FlowRate: 2700.0\n            <br> Last Insp: 2024-11-10T09:00:00Z\n            <br> Next Maintainance: 2025-04-01T10:00:00Z,\n            <br> Alerts: [\'None\'],\n            <br> Connected Assets: [\'Angus\', \'Union\']\n            <br> Anomalies: 1\n            <br> Workpacks: 2</h4></html>'
+            content: '<html><img src="https://th.bing.com/th/id/R.c5e045cba2f39843da6aa04a4d38eab4?rik=Yw7DWIqLARm9BA&riu=http%3a%2f%2fbrisktradeng.net%2fwp-content%2fuploads%2f2023%2f03%2fIMG-3077.jpg&ehk=itwRfFrixBukPJgYSSBORnN3gCyUWCAaDjVEUW%2fFH4s%3d&risl=&pid=ImgRaw&r=0"style="width:200px;height:200px;">\n            <h2>Ness</h2>\n            <h4><br> Depth: 230.0m\n            <br> Health: Degraded\n            <br> Pressure: 105.0 bar\n            <br> Temperature: 14.8&degC\n            <br> FlowRate: 2700.0l/min\n            <br> Last Insp: 2024-11-10T09:00:00Z\n            <br> Next Maintainance: 2025-04-01T10:00:00Z,\n            <br> Alerts: [\'None\'],\n            <br> Connected Assets: [\'Angus\', \'Union\']\n            <br> Anomalies: 1\n            <br> Workpacks: 2</h4></html>'
         });
         
         info_marker_18.addListener('click', function() {
@@ -319,7 +327,7 @@
         });
 
         var info_window_19 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Aurora</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 245.0\n    <br> Speed: 12.5\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-26T10:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-15T00:00:00Z\n    <br> Crew Count: 12\n    <br> Fuel Level: 80\n    <br> Weather: <br>\n    <ul>15.0 </ul>\n    <ul>2.3</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Aurora</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 245.0 N\n    <br> Speed: 12.5 knots\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-26T10:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-15T00:00:00Z\n    <br> Crew Count: 12\n    <br> Fuel Level: 80%\n    <br> Weather: <br>\n    <ul>Wind Speed: 15.0mph </ul>\n    <ul>Wave height:2.3m</ul>\n    <ul>temprature:10.0&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_19.addListener('click', function() {
@@ -334,7 +342,7 @@
         });
 
         var info_window_20 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Discovery</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 90.0\n    <br> Speed: 10.0\n    <br> Destination: Thistle\n    <br> ETA: 2025-01-26T14:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-30T10:00:00Z\n    <br> Crew Count: 15\n    <br> Fuel Level: 65\n    <br> Weather: <br>\n    <ul>12.0 </ul>\n    <ul>1.8</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Discovery</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 90.0 N\n    <br> Speed: 10.0 knots\n    <br> Destination: Thistle\n    <br> ETA: 2025-01-26T14:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-30T10:00:00Z\n    <br> Crew Count: 15\n    <br> Fuel Level: 65%\n    <br> Weather: <br>\n    <ul>Wind Speed: 12.0mph </ul>\n    <ul>Wave height:1.8m</ul>\n    <ul>temprature:8.5&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_20.addListener('click', function() {
@@ -349,7 +357,7 @@
         });
 
         var info_window_21 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Trident</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 180.0\n    <br> Speed: 9.0\n    <br> Destination: Logan\n    <br> ETA: 2025-01-27T12:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-10T09:00:00Z\n    <br> Crew Count: 20\n    <br> Fuel Level: 50\n    <br> Weather: <br>\n    <ul>20.0 </ul>\n    <ul>2.5</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Trident</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 180.0 N\n    <br> Speed: 9.0 knots\n    <br> Destination: Logan\n    <br> ETA: 2025-01-27T12:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-10T09:00:00Z\n    <br> Crew Count: 20\n    <br> Fuel Level: 50%\n    <br> Weather: <br>\n    <ul>Wind Speed: 20.0mph </ul>\n    <ul>Wave height:2.5m</ul>\n    <ul>temprature:9.0&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_21.addListener('click', function() {
@@ -364,7 +372,7 @@
         });
 
         var info_window_22 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Forerunner</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 310.0\n    <br> Speed: 15.0\n    <br> Destination: Balmoral\n    <br> ETA: 2025-01-26T18:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-01T08:00:00Z\n    <br> Crew Count: 10\n    <br> Fuel Level: 85\n    <br> Weather: <br>\n    <ul>18.0 </ul>\n    <ul>2.8</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Forerunner</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 310.0 N\n    <br> Speed: 15.0 knots\n    <br> Destination: Balmoral\n    <br> ETA: 2025-01-26T18:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-01T08:00:00Z\n    <br> Crew Count: 10\n    <br> Fuel Level: 85%\n    <br> Weather: <br>\n    <ul>Wind Speed: 18.0mph </ul>\n    <ul>Wave height:2.8m</ul>\n    <ul>temprature:7.5&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_22.addListener('click', function() {
@@ -379,7 +387,7 @@
         });
 
         var info_window_23 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Jasper</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 270.0\n    <br> Speed: 11.0\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-27T08:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-20T09:00:00Z\n    <br> Crew Count: 14\n    <br> Fuel Level: 40\n    <br> Weather: <br>\n    <ul>10.0 </ul>\n    <ul>1.5</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Jasper</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 270.0 N\n    <br> Speed: 11.0 knots\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-27T08:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-20T09:00:00Z\n    <br> Crew Count: 14\n    <br> Fuel Level: 40%\n    <br> Weather: <br>\n    <ul>Wind Speed: 10.0mph </ul>\n    <ul>Wave height:1.5m</ul>\n    <ul>temprature:9.8&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_23.addListener('click', function() {
@@ -394,7 +402,7 @@
         });
 
         var info_window_24 = new google.maps.InfoWindow({
-            content: '\n    <html><h2>ELZ Justice</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 135.0\n    <br> Speed: 8.5\n    <br> Destination: Auchterloch\n    <br> ETA: 2025-01-27T15:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-05T12:00:00Z\n    <br> Crew Count: 22\n    <br> Fuel Level: 55\n    <br> Weather: <br>\n    <ul>25.0 </ul>\n    <ul>3.0</ul>\n    </h4></html>\n    '
+            content: '\n    <html><h2>ELZ Justice</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 135.0 N\n    <br> Speed: 8.5 knots\n    <br> Destination: Auchterloch\n    <br> ETA: 2025-01-27T15:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-05T12:00:00Z\n    <br> Crew Count: 22\n    <br> Fuel Level: 55%\n    <br> Weather: <br>\n    <ul>Wind Speed: 25.0mph </ul>\n    <ul>Wave height:3.0m</ul>\n    <ul>temprature:6.5&degC</ul>\n    </h4></html>\n    '
         });
         
         info_marker_24.addListener('click', function() {
