@@ -21,9 +21,9 @@ def index():
             #Read in the username and password from the form.
             uname = request.form['uname']
             passwd = request.form['passwd']
-            if uname == "aford" and passwd == "rguhack":
+            if uname == "alfie" and passwd == "rguhack":
                 return redirect('/map.html')
-            if uname == "bkrienke" and passwd == "rguhack":
+            if uname == "brodie" and passwd == "rguhack":
                 return redirect('/map.html')
             print(hash(passwd))
     return render_template('index.html')
@@ -103,7 +103,7 @@ for point in range(len(PipeName)):
         (PipeEndLat[point],PipeEndLon[point])
     ])
     gmap.plot(*path, edge_width=4, color="lightgrey")
-
+print(PipeDepth[0:-1])
 #Get subsea assets
 SubAssetResult = requests.get("https://elementz.rguhack.uk/subseaAssets")
 SubAssetLat = []
