@@ -311,46 +311,94 @@
             labelOrigin: new google.maps.Point(10, 11)
         };
 
-        new google.maps.Marker({
+        var info_marker_19 = new google.maps.Marker({
             position: new google.maps.LatLng(57.32, -0.19),
             title: "ELZ Aurora",
             icon: marker_icon_0000FF,
             map: map
         });
 
-        new google.maps.Marker({
+        var info_window_19 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Aurora</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 245.0\n    <br> Speed: 12.5\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-26T10:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-15T00:00:00Z\n    <br> Crew Count: 12\n    <br> Fuel Level: 80\n    <br> Weather: <br>\n    <ul>15.0 </ul>\n    <ul>2.3</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_19.addListener('click', function() {
+            info_window_19.open(map, info_marker_19);
+        });
+
+        var info_marker_20 = new google.maps.Marker({
             position: new google.maps.LatLng(58.50, 1.20),
             title: "ELZ Discovery",
             icon: marker_icon_0000FF,
             map: map
         });
 
-        new google.maps.Marker({
+        var info_window_20 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Discovery</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 90.0\n    <br> Speed: 10.0\n    <br> Destination: Thistle\n    <br> ETA: 2025-01-26T14:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-30T10:00:00Z\n    <br> Crew Count: 15\n    <br> Fuel Level: 65\n    <br> Weather: <br>\n    <ul>12.0 </ul>\n    <ul>1.8</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_20.addListener('click', function() {
+            info_window_20.open(map, info_marker_20);
+        });
+
+        var info_marker_21 = new google.maps.Marker({
             position: new google.maps.LatLng(59.30, 2.00),
             title: "ELZ Trident",
             icon: marker_icon_0000FF,
             map: map
         });
 
-        new google.maps.Marker({
+        var info_window_21 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Trident</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 180.0\n    <br> Speed: 9.0\n    <br> Destination: Logan\n    <br> ETA: 2025-01-27T12:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-10T09:00:00Z\n    <br> Crew Count: 20\n    <br> Fuel Level: 50\n    <br> Weather: <br>\n    <ul>20.0 </ul>\n    <ul>2.5</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_21.addListener('click', function() {
+            info_window_21.open(map, info_marker_21);
+        });
+
+        var info_marker_22 = new google.maps.Marker({
             position: new google.maps.LatLng(58.75, 1.45),
             title: "ELZ Forerunner",
             icon: marker_icon_0000FF,
             map: map
         });
 
-        new google.maps.Marker({
+        var info_window_22 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Forerunner</h2>\n    <h4><br> Vessel Type: Survey\n    <br> Heading: 310.0\n    <br> Speed: 15.0\n    <br> Destination: Balmoral\n    <br> ETA: 2025-01-26T18:00:00Z\n    <br> Status: Surveying\n    <br> Last Inspection: 2024-12-01T08:00:00Z\n    <br> Crew Count: 10\n    <br> Fuel Level: 85\n    <br> Weather: <br>\n    <ul>18.0 </ul>\n    <ul>2.8</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_22.addListener('click', function() {
+            info_window_22.open(map, info_marker_22);
+        });
+
+        var info_marker_23 = new google.maps.Marker({
             position: new google.maps.LatLng(58.90, -0.50),
             title: "ELZ Jasper",
             icon: marker_icon_0000FF,
             map: map
         });
 
-        new google.maps.Marker({
+        var info_window_23 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Jasper</h2>\n    <h4><br> Vessel Type: Research\n    <br> Heading: 270.0\n    <br> Speed: 11.0\n    <br> Destination: Aberdeen Port\n    <br> ETA: 2025-01-27T08:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-11-20T09:00:00Z\n    <br> Crew Count: 14\n    <br> Fuel Level: 40\n    <br> Weather: <br>\n    <ul>10.0 </ul>\n    <ul>1.5</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_23.addListener('click', function() {
+            info_window_23.open(map, info_marker_23);
+        });
+
+        var info_marker_24 = new google.maps.Marker({
             position: new google.maps.LatLng(59.00, 1.80),
             title: "ELZ Justice",
             icon: marker_icon_0000FF,
             map: map
+        });
+
+        var info_window_24 = new google.maps.InfoWindow({
+            content: '\n    <html><h2>ELZ Justice</h2>\n    <h4><br> Vessel Type: Cargo\n    <br> Heading: 135.0\n    <br> Speed: 8.5\n    <br> Destination: Auchterloch\n    <br> ETA: 2025-01-27T15:00:00Z\n    <br> Status: EnRoute\n    <br> Last Inspection: 2024-12-05T12:00:00Z\n    <br> Crew Count: 22\n    <br> Fuel Level: 55\n    <br> Weather: <br>\n    <ul>25.0 </ul>\n    <ul>3.0</ul>\n    </h4></html>\n    '
+        });
+        
+        info_marker_24.addListener('click', function() {
+            info_window_24.open(map, info_marker_24);
         });
 
         new google.maps.Polyline({

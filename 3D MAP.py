@@ -7,12 +7,12 @@ import os
 from mpl_toolkits.basemap import Basemap
 
 # Directory to save images
-output_dir = './'
+output_dir = './3dthing/'
 os.makedirs(output_dir, exist_ok=True)
 
 # Set up figure for plotting with higher DPI
 plt.ion()
-fig, ax0 = plt.subplots(figsize=(5.3, 4), dpi=150)  # Increased DPI for higher resolution
+fig, ax0 = plt.subplots(figsize=(5.3, 4), dpi=2)  # Increased DPI for higher resolution
 ax0.set_position([0.0, 0.0, 1.0, 1.0])
 
 lat_viewing_angle = [20, 20]
@@ -26,7 +26,7 @@ m1 = Basemap(projection='ortho',
              lat_0=lat_vec[0], lon_0=lon_vec[0], resolution=None)
 
 # Add axis for space background effect
-galaxy_image = plt.imread('./nathan-anderson-eS7HrvG0mcA-unsplash.jpg')  # Background image
+galaxy_image = plt.imread('./3d1.jpg')  # Background image
 ax0.imshow(galaxy_image)
 ax0.set_axis_off()
 ax1 = fig.add_axes([0.25, 0.2, 0.5, 0.5])

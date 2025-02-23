@@ -166,59 +166,50 @@ for asset in SurfAssetResult.json():
     SurfAssetLastInspection.append(asset['last_inspection'])
     SurfAssetCrewCount.append(asset['crew_count'])
     SurfAssetFuelLevel.append(asset['fuel_level'])
-    SurfAssetWeather.append(([asset['weather']['wind_speed']],[asset['weather']['wave_height']],[asset['weather']['temperature']]))
+    SurfAssetWeather[0].append(asset['weather']['wind_speed'])
+    SurfAssetWeather[1].append(asset['weather']['wave_height'])
+    SurfAssetWeather[2].append(asset['weather']['temperature'])
 
 for point in range(len(SurfAssetName)):
-    gmap.marker(SurfAssetLat[point],SurfAssetLon[point], title=SurfAssetName[point], precision=2, color="blue")
+    gmap.marker(SurfAssetLat[point],SurfAssetLon[point], title=SurfAssetName[point], info_window=f"""
+    <html><h2>{SurfAssetName[point]}</h2>
+    <h4><br> Vessel Type: {SurfAssetVesselType[point]}
+    <br> Heading: {SurfAssetHeading[point]}
+    <br> Speed: {SurfAssetSpeed[point]}
+    <br> Destination: {SurfAssetDest[point]}
+    <br> ETA: {SurfAssetETA[point]}
+    <br> Status: {SurfAssetStatus[point]}
+    <br> Last Inspection: {SurfAssetLastInspection[point]}
+    <br> Crew Count: {SurfAssetCrewCount[point]}
+    <br> Fuel Level: {SurfAssetFuelLevel[point]}
+    <br> Weather: <br>
+    <ul>{SurfAssetWeather[0][point]} </ul>
+    <ul>{SurfAssetWeather[1][point]}</ul>
+    </h4></html>
+    """, precision=2, color="blue")
 gmap.draw('templates/map.html')
 
 
-import os
+# import os
 
-def create_html_file(data, file_name, template_dir='templates'):
-    # Ensure the template directory exists
-    os.makedirs(template_dir, exist_ok=True)
+# def create_html_file(data, file_name, template_dir='templates'):
+#     # Ensure the template directory exists
+#     os.makedirs(template_dir, exist_ok=True)
     
-    # Create the HTML content
-    html_content = f"""
-    <div id="content">
-        <h1>{data['heading']}</h1>
-        <p>{data['content']}</p>
-    """
+#     # Create the HTML content
+#     html_content = f"""
+#     <div id="content">
+#         <h1>{data['heading']}</h1>
+#         <p>{data['content']}</p>
+#     """
     
-    # Write the HTML content to a file
-    file_path = os.path.join(template_dir, f"{file_name}.html")
-    with open(file_path, 'w') as file:
-        file.write(html_content)
+#     # Write the HTML content to a file
+#     file_path = os.path.join(template_dir, f"{file_name}.html")
+#     with open(file_path, 'w') as file:
+#         file.write(html_content)
     
-    print(f"HTML file created at {file_path}")
+#     print(f"HTML file created at {file_path}")
 
-def setupdatapages():
-    #for POI in range(len(POIName)):
-    #    data = {
-    #        'title': POIName[POI],
-    #        'heading': POIName[POI],
-    #        'content': POIDesc[POI]
-    #        }
-    #    create_html_file(data, POI)
-    for SUB in range(len(SubAssetName)):
-        data = {
-            'title': SubAssetName[SUB],
-            'heading': SubAssetName[SUB],
-            'content': f"""Depth: {SubAssetDepth[SUB]}
-            \n Health: {SubAssetHealth[SUB]}
-            \nPressure:{SubAssetPressure[SUB]}
-            \nTemperature: {SubAssetTemp[SUB]}
-            \nFlowRate: {SubAssetFlowRate[SUB]}
-            \nLast Insp:{SubAssetMaintenanceInfo[0][SUB]}
-            \nNext Maintainance: {SubAssetMaintenanceInfo[1][SUB]},
-            \nAlerts: {SubAssetAlerts[SUB]},
-            \nConnected Assets: {SubConnectedAssets[SUB]}
-            \nAnomalies: {SubAssetAnomalies[SUB]}
-            \nWorkpacks: {SubAssetWorkpacks[SUB]}"""
-            }
-        create_html_file(data, f"{SubAssetName[SUB]}")
-setupdatapages()
 #  # Example usage
 # data = {
 #     'title': 'Sample Page',
