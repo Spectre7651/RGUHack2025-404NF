@@ -1,0 +1,48 @@
+    body{
+    background-image: url("/background");
+    background-repeat: no-repeat;
+    background-size: cover;}
+    /* This section codes for the login screen */
+    #login-loginform {
+        position: absolute;
+        top: 70%;
+        width: 33%;
+        left: 33%;
+        top: 20%;
+        background-color: lightgrey;
+        text-align: center ;
+        border: 2px white;
+        border-radius: 10px;
+      }
+    form {
+      padding: 20px
+      }
+    input{
+        width: 50%;
+        padding: 5px ;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid darkgrey;
+        outline: none;
+        float: center;
+        font-family:Arial, sans-serif;
+      }
+    #h2-login {
+      text-align: center ;
+      font-family:Arial, sans-serif;
+      }
+    #submit{
+       width:20%;
+       padding:5px ;
+       margin: 8px 0;
+       box-sizing: border-box;
+       border: 1px solid darkgrey;
+       outline: none;
+       float: center;
+       font-family: Arial,sans-serif;
+      }
+      
+      input:focus {
+        background-color: lightcyan;
+      }
+ 

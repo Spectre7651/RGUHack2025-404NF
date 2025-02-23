@@ -1,17 +1,42 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, request, current_app, redirect
 import requests
 import json
 import gmplot
 
 app = Flask(__name__)
-
-@app.route('/')
+@app.route('/', methods=['POST','GET'])
 def index():
+    #Basic User Authentication obviously not really secure
+    #Check if the user has submitted the login page form
+    if request.method == 'POST':
+        #return the page
+        if request.form['uname'] == None and request.form['passwd'] == None:
+            return render_template('index.html')
+        #If one field is empty out of the two return the page asking for the correct details
+        elif request.form['uname'] == '' or request.form['passwd'] == '':
+            errormess = "Please fill in both fields"
+            return render_template('index.html',error=errormess)
+        #Otherwise collect the username and password from the form and check it.
+        else:
+            #Read in the username and password from the form.
+            uname = request.form['uname']
+            passwd = request.form['passwd']
+            if uname == "aford" and passwd == "rguhack":
+                return redirect('/map.html')
+            if uname == "bkrienke" and passwd == "rguhack":
+                return redirect('/map.html')
+            print(hash(passwd))
+    return render_template('index.html')
+@app.route('/style.css')
+def css():
+    return current_app.send_static_file('style.css')
+@app.route('/background')
+def background():
+    return current_app.send_static_file('bg.jpg')
+@app.route('/map.html')
+def map():
     return render_template('map.html')
 
-@app.route('/templates/Ness.html')
-def templates():
-    return render_template("Ness.html")
     #Setup Google Map
 apikey = '' #No api key needed for dev
 gmap = gmplot.GoogleMapPlotter(57.118696610829296, -2.1350145324081367, 5, apikey=apikey)
@@ -30,7 +55,10 @@ for element in POIResponse.json():
 
 #Plot POI's
 for point in range(len(POILat)):
-    gmap.marker(POILat[point], POILon[point], title=POIName[point], label='i', info_window=f"""<html><h2>{POIName[point]}</h2>
+    gmap.marker(POILat[point], POILon[point], title=POIName[point], label='i', info_window=f"""
+            <html>
+            <img src="https://www.scotland.org/images/uploads/general/Robert_Gordon_University_Hero_Image.jpg" style="width:300px;height:200px;">
+            <h2>{POIName[point]}</h2>
             <br> Description: {POIDesc[point]}</h4></html>""" , precision=2, color='#FFD700')
 
 
@@ -172,7 +200,8 @@ for asset in SurfAssetResult.json():
 
 for point in range(len(SurfAssetName)):
     gmap.marker(SurfAssetLat[point],SurfAssetLon[point], title=SurfAssetName[point], info_window=f"""
-    <html><h2>{SurfAssetName[point]}</h2>
+    <html><img src="https://th.bing.com/th/id/OIP.UFoBQpFIAgjC6xdrYC7ZiQHaEK?rs=1&pid=ImgDetMain"style="width:300px;height:200px;">
+    <h2>{SurfAssetName[point]}</h2>
     <h4><br> Vessel Type: {SurfAssetVesselType[point]}
     <br> Heading: {SurfAssetHeading[point]} N
     <br> Speed: {SurfAssetSpeed[point]} knots

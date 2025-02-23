@@ -1,0 +1,27 @@
+<!--This is the HTML for the Login Page accessable at [localhost:8080]-->
+<!DOCTYPE html>
+<html lang="en-GB" id="main">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+    background-image: 'https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?cs=srgb&dl=pexels-berend-1452701.jpg&fm=jpg';
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="/favicon">
+</head>
+
+<body id="login-loginform">
+  <form action="#" method="POST" autocomplete="off" accept-charset="utf-8">
+
+    <h2 id="h2-login">AssetMapper Login V1</h2>
+    <!--This variable is only shown is app.py fills it in when rendering the page-->
+    <h3>{{error}}</h3>
+    <input type="text" name="uname" placeholder="Username" id="uname"><br>
+    <input type="password" name="passwd" placeholder="Password" id="passwd"><br>
+    <input type="submit" id="submit" label="Login" value="Login">
+  </form>
+</body>
+
+</html>
